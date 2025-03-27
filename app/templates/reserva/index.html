@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>intro a recerva</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .imagen-boton {
+            width: 300px;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid #000;
+        }
+
+        .imagen-boton:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h2>Selecciona un vehículo</h2>
+
+    <div>
+        <img src="https://example.com/auto.jpg" alt="Auto" class="imagen-boton" onclick="mostrarMensaje('Auto seleccionado')">
+    <script>
+        function mostrarMensaje(mensaje) {
+            alert(mensaje);
+        }
+    </script>
+     
+</body>
+</html>

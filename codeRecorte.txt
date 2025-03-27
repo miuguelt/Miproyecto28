@@ -1,0 +1,167 @@
+//////////code chat
+
+Paso 3: Reserva de espacio (si aplica): Si la web permite hacer reservas, muestra cómo se realiza el proceso de reserva, desde elegir un espacio hasta confirmar la reserva.
+Paso 4: Métodos de pago o confirmación de reservas: Explica cómo pagar en línea o confirmar la reserva de forma fácil y segura.
+4. Botón de acción:
+Al final del tutorial, proporciona un botón claro para avanzar,"Haz tu primera reserva".
+
+<div class="button-container">
+        <button class="login-btn" onclick="window.location.href='{{ url_for('login/login.thml') }}'">Ir a Login</button>
+    </div> '{{ url_for('auth.login') }} uriginal
+
+@bp.route('/login')
+def login():
+    return render_template('login/login.html')
+
+///////////////code andy
+ <button class="btn btn-primary">Iniciar sesión</button>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+ def get_img(self, img_attr):
+        return getattr(self, img_attr) if getattr(self, img_attr) else "imagenes/usuario.png"
+    
+    def get_img2(self):
+        """Retorna la imagen de perfil del usuario o una imagen por defecto."""
+        return f"imagenes/{self.imgper}" if self.imgper else "imagenes/casco1.webp"# esta linea faltaba en este codigo
+    
+    
+    @bp.route('/', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        nameuser = request.form['nameuser']
+        passworduser = request.form['passworduser']
+        
+        user = Users.query.filter_by(nameuser=nameuser, passworduser=passworduser).first()
+
+        if user:
+            login_user(user)
+            flash("logeado satisfactoriamente", "success")
+            return redirect(url_for('auth.dashboard'))
+        
+        flash('Invalida el usuario o contraseña . Por favor intente nuevamente.', 'danger')
+    
+    if current_user.is_authenticated:
+        return redirect(url_for('auth.dashboard'))
+    return render_template("login.html")
+
+    @bp.route('/)
+    def publicidad():
+     return render_template('cliente/index.html', data=Cliente)
+
+     ///////////////////  Pregunta a chat
+     1 que es dashboard
+
+      <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #e0f7fa;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: #333;
+            }
+    
+            .login-container {
+                background-color: #ffffff;
+                padding: 40px 50px;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 380px;
+                text-align: center;
+                transition: transform 0.3s ease;
+            }
+    
+            .login-container:hover {
+                transform: scale(1.02);
+            }
+    
+            .login-logo {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 30px;
+            }
+    
+            h2 {
+                font-size: 28px;
+                color: #007906;
+                margin-bottom: 20px;
+                font-weight: 500;
+            }
+    
+            .form-group {
+                margin-bottom: 20px;
+                text-align: left;
+            }
+    
+            .form-group label {
+                font-size: 14px;
+                color: #00796b;
+                margin-bottom: 8px;
+                display: block;
+            }
+    
+            .form-group input {
+                width: 100%;
+                padding: 12px;
+                border-radius: 5px;
+                border: 2px solid #00796b;
+                font-size: 16px;
+                margin-bottom: 12px;
+                box-sizing: border-box;
+                transition: border-color 0.3s ease;
+            }
+    
+            .form-group input:focus {
+                outline: none;
+                border-color: #004d40;
+            }
+    
+            .submit-btn {
+                width: 100%;
+                background-color: #00796b;
+                color: white;
+                padding: 12px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
+    
+            .submit-btn:hover {
+                background-color: #004d40;
+            }
+    
+            .back-button {
+                margin-top: 20px;
+                display: block;
+                background-color: #00796b;
+                color: white;
+                padding: 12px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 16px;
+                text-align: center;
+                transition: background-color 0.3s ease;
+            }
+    
+            .back-button:hover {
+                background-color: #004d40;
+            }
+    
+            .flash-message {
+                background-color: #ffebee;
+                color: #d32f2f;
+                padding: 12px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                font-size: 14px;
+                box-sizing: border-box;
+            }

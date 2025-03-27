@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Espacios</title>
+</head>
+<body>
+    <h1>Lista de Espacios</h1>
+
+    <!-- Enlace para agregar un nuevo espacio -->
+    <a href="{{ url_for('espacio.add') }}">Agregar Nuevo Espacio</a>
+
+    <!-- Tabla para mostrar los espacios -->
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Descripción</th>
+                <th>Ubicación</th>
+                <th>Activo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for espacio in data %}
+            <tr>
+                <td>{{ espacio.numero }}</td>
+                <td>{{ espacio.descripcion }}</td>
+                <td>{{ espacio.Ubicación }}</td>
+                <td>{% if espacio.activo %}Sí{% else %}No{% endif %}</td>
+                <td>
+                    <!-- Enlace para editar el espacio -->
+                    <a href="{{ url_for('espacio.edit', id=espacio.ID_Espacio) }}">Editar</a> | 
+                    <!-- Enlace para eliminar el espacio -->
+                    <a href="{{ url_for('espacio.delete', id=espacio.ID_Espacio) }}" onclick="return confirm('¿Estás seguro de que deseas eliminar este espacio?');">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

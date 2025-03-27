@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones - Cómo Navegar por el Sitio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='miestilo2.css') }}">
+    <link rel="stylesheet" href="{{url_for('static',filename='w3.css')}}"
+    <!-- Aquí puedes incluir tu propio archivo CSS o usar uno de un CDN -->
+
+</head>
+<body>
+
+<header>
+    <h1>Bienvenido a Nuestro Sitio Web</h1>
+    <p>¡Aquí te mostramos cómo navegar por nuestra plataforma!</p>
+</header>
+
+<main>
+    <section class="instructions">
+        <h2>Instrucciones para Navegar</h2>
+
+        <div class="instruction-item">
+            <h3>1. Explora el Dashboard</h3>
+            <p>En el Dashboard podrás ver un resumen general de tu cuenta, incluyendo tus productos y usuarios registrados. Haz clic en los diferentes apartados para ver más detalles.</p>
+        </div>
+
+        <div class="instruction-item">
+            <h3>2. Accede a las Secciones de Productos</h3>
+            <p>Para ver los productos disponibles, dirígete a las secciones de "Motos" o "Autos". Allí podrás ver todos los productos registrados y obtener más información de cada uno.</p>
+        </div>
+
+        <div class="instruction-item">
+            <h3>3. Realiza Búsquedas</h3>
+            <p>Si buscas algo en específico, utiliza la barra d
+        </div>
+                <div>
+                    <form class="form-horizontal">
+                        <a class="btn btn-primary" href="{{ url_for('reserva.index') }}" >Has tu primera reserva!!!</a>
+                    </form>
+                </div>
+    </section>
+       

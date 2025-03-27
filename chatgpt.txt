@@ -1,0 +1,6 @@
+Paso 3: Reserva de espacio (si aplica): Si la web permite hacer reservas, muestra cómo se realiza el proceso de reserva, desde elegir un espacio hasta confirmar la reserva.
+Paso 4: Métodos de pago o confirmación de reservas: Explica cómo pagar en línea o confirmar la reserva de forma fácil y segura.
+4. Botón de acción:
+Al final del tutorial, proporciona un botón claro para avanzar,"Haz tu primera reserva".
+
+
